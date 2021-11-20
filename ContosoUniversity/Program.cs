@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -28,6 +29,7 @@ namespace ContosoUniversity
                 var services = scope.ServiceProvider;
                 try
                 {
+                    CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
                     var context = services.GetRequiredService<SchoolContext>();
                     DbInitializer.Initialize(context);
                 }

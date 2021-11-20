@@ -26,7 +26,7 @@ namespace ContosoUniversity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SchoolContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlite(Configuration.GetConnectionString("SchoolContext")));
             // docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=SuperS3cure" -p 1433:1433 --name ContosaUniversity -h ContosaUniversity -d mcr.microsoft.com/mssql/server:2019-latest
             
             services.AddDatabaseDeveloperPageExceptionFilter();
