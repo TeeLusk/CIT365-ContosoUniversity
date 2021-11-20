@@ -9,7 +9,6 @@ using ContosoUniversity.Models;
 using Microsoft.EntityFrameworkCore;
 using ContosoUniversity.Data;
 using ContosoUniversity.Models.SchoolViewModels;
-using Microsoft.Extensions.Logging;
 
 namespace ContosoUniversity.Controllers
 {
